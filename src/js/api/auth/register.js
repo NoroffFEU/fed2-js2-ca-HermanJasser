@@ -1,3 +1,4 @@
+import { API_AUTH_REGISTER } from "../constants";
 export async function postRegisterInfo(name, email, password){
   try{
       const options = {
@@ -12,7 +13,7 @@ export async function postRegisterInfo(name, email, password){
             }),
       };
 
-      const response = await fetch(`https://v2.api.noroff.dev/auth/register`, options); 
+      const response = await fetch(API_AUTH_REGISTER, options); 
       //console.log(data);
 
       if(response.ok){

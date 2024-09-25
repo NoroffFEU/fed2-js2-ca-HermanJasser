@@ -1,4 +1,4 @@
-import { API_KEY } from "../constants";
+import { API_KEY, API_SOCIAL_POSTS } from "../constants";
 
 export async function createPost( title, content, url, alt ) {
     try {
@@ -20,7 +20,7 @@ export async function createPost( title, content, url, alt ) {
             }),
         };
 
-        const response = await fetch(`https://v2.api.noroff.dev/social/posts/`, options);
+        const response = await fetch(API_SOCIAL_POSTS, options);
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);

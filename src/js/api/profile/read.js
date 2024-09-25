@@ -1,5 +1,6 @@
 
-import { API_KEY } from "../constants";
+import { API_KEY, API_SOCIAL_PROFILES } from "../constants";
+import { DeleteBtnListener } from "../../ui/post/delete";
 
 //export async function readProfile(username) {}
 
@@ -17,7 +18,7 @@ export async function getMyPosts() {
               };
 
         const username = localStorage.username;
-        const response = await fetch(`https://v2.api.noroff.dev/social/profiles/${username}/posts`, options);
+        const response = await fetch(`${API_SOCIAL_PROFILES}/${username}/posts`, options);
         if (!response.ok) throw new Error(`HTTP error! ${response.status}`);
         const data = await response.json();
         const postsApi = data.data;
@@ -48,4 +49,9 @@ function listMyPosts(api){
         `;
     }
     myPostCont.innerHTML = cont;
+
+    api.forEach((i) => {
+        DeleteBtnListener(i.id);
+      });
 }
+

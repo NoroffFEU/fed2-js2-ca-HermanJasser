@@ -1,3 +1,5 @@
+import { API_AUTH_LOGIN } from "../constants";
+
 export async function login(email, password) {
     try {
        
@@ -8,7 +10,7 @@ export async function login(email, password) {
             },
             body: JSON.stringify({ email, password }),
         };
-        const response = await fetch(`https://v2.api.noroff.dev/auth/login/`, options); 
+        const response = await fetch(API_AUTH_LOGIN, options); 
         if (response.ok){
             const data = await response.json();
             //console.log(data.data.accessToken);

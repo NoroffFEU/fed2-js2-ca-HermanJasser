@@ -1,4 +1,4 @@
-import { API_KEY } from "../constants";
+import { API_KEY, API_SOCIAL_POSTS } from "../constants";
 import { id } from "../../router/views/postEdit";
 
 const editPostForm = document.getElementById("edit-post-form");
@@ -13,7 +13,7 @@ export async function getEditPostFormValue(id) {
               };
 
         const username = localStorage.username;
-        const response = await fetch(`https://v2.api.noroff.dev/social/posts/${id}`, options);
+        const response = await fetch(`${API_SOCIAL_POSTS}/${id}`, options);
         if (!response.ok) throw new Error(`HTTP error! ${response.status}`);
         const data = await response.json();
         const postApi = data.data;
@@ -50,7 +50,7 @@ export async function updatePost(title, content, url, alt){
             }),
         };
 
-        const response = await fetch(`https://v2.api.noroff.dev/social/posts/${id}`, options);
+        const response = await fetch(`${API_SOCIAL_POSTS}/${id}`, options);
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
