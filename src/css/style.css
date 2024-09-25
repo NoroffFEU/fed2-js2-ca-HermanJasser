@@ -1,1 +1,44 @@
 @import url(_reset.css);
+
+
+#post-cont, #my-posts-cont{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#post-cont > div, #my-posts-cont > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: rgba(128, 128, 128, 0.152);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+}
+
+#post-cont > div > img, #my-posts-cont > div > img{
+    width: 100%;
+    max-width: 400px;
+    border: black solid 2px;
+}
+
+#create-post, #edit-post-form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width:300px;
+}
+
+#create-post input, #edit-post-form input{
+    margin-bottom: 20px;
+    height: 35px;
+}
+
+#create-post button, #edit-post-form button{
+    width: 150px;
+    align-self: center;
+}
+
