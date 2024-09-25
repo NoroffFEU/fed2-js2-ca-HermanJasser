@@ -1,1 +1,5 @@
-export function setLogoutListener() {}
+export function setLogoutListener() {
+
+
+    
+}
