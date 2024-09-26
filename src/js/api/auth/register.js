@@ -20,7 +20,7 @@ export async function postRegisterInfo(name, email, password){
           const data = await response.json();
           //console.log(data);
           window.alert("User created")
-          window.location = "/";
+          window.location = "/auth/login/";
       } else {
           throw new Error(response.statusText);
       }
