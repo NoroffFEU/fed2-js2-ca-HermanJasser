@@ -35,11 +35,14 @@ function listPosts(api){
         let mediaAlt = api[i].media && api[i].media.alt ? api[i].media.alt : 'Placeholder image';
         let bodyContent = api[i].body ? api[i].body : '';
 
-        cont += `<div>
+        cont += `
+        <a href="/post/?id=${api[i].id}">
+        <div>
         <h2>${api[i].title}</h2> 
         <img src="${mediaUrl}" alt="${mediaAlt}">
         <p>${bodyContent}</p>
         </div>
+        </a>
         `;
     }
     postCont.innerHTML = cont;

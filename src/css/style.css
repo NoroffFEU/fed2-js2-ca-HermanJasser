@@ -7,7 +7,12 @@
     flex-direction: column;
 }
 
-#post-cont > div, #my-posts-cont > div{
+#post-cont a{
+color: black;
+text-decoration: none;
+}
+
+#post-cont div, #my-posts-cont > div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +24,7 @@
     width: 100%;
 }
 
-#post-cont > div > img, #my-posts-cont > div > img{
+#post-cont img, #my-posts-cont > div > img{
     width: 100%;
     max-width: 400px;
     border: black solid 2px;
@@ -42,3 +47,12 @@
     align-self: center;
 }
 
+#single-post-div{
+    margin: 0 auto;
+    width: 100%;
+    padding: 40px;
+}
+
+#single-post-div img{
+width: 100%;
+}
