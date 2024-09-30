@@ -1,5 +1,8 @@
 import { onRegister } from "../../ui/auth/register";
+import { isLoggedIn } from "../../utilities/loggedIn";
 
-const form = document.forms.register;
+isLoggedIn();
+
+export const form = document.forms.register;
 
 form.addEventListener("submit", onRegister);

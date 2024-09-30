@@ -9,7 +9,19 @@
   <body>
     <h1>Create Post</h1>
 
-    <form name="createPost">
+    <form id="create-post" name="createPost">
+      <label for="title">Title</label>
+      <input type="text" name="title" placeholder="Title">
+
+      <label for="content">Content</label>
+      <textarea name="content" placeholder="Content" cols="30" rows="10"></textarea>
+
+      <label for="url">Add image url</label>
+      <input type="url" name="url"  placeholder="url">
+
+      <label for="alt">Add image alt text</label>
+      <input type="text" name="alt" placeholder="alt">
+
       <button>Create Post</button>
     </form>
   </body>
