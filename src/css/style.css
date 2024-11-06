@@ -1,4 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url(_reset.css);
+
 
 
 #post-cont, #my-posts-cont{
