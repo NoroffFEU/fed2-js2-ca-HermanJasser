@@ -1,8 +1,10 @@
+@import url(_reset.css);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url(_reset.css);
+
 
 
 
