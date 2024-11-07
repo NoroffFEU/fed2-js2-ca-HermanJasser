@@ -8,21 +8,22 @@
     <script type="module" src="/src/app.js"></script>
   </head>
 
-  <body>
-    <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+  <body class="flex items-center justify-center min-h-screen bg-blue-100">
+    <div class="w-full max-w-md shadow-lg rounded-lg bg-white py-6">
+      <img class="" src="/images/noroff-logo.png" alt="Noroff Logo" />
 
-    <h1>Home</h1>
+      <h1>Home</h1>
 
-    <a href="/profile/">My Profile</a>
-    <div id="log-in-register-btn">
-      <a href="/auth/login/">Login</a>
-      <a href="/auth/register/">Register</a>
+      <a href="/profile/">My Profile</a>
+      <div id="log-in-register-btn">
+        <a href="/auth/login/">Login</a>
+        <a href="/auth/register/">Register</a>
+      </div>
+      <button id="log-out-btn">Logout</button>
+
+      <div id="post-cont">
+        <h2>Laster...</h2>
+      </div>
     </div>
-    <button id="log-out-btn">Logout</button>
-
-    <div id="post-cont">
-      <h2>Laster...</h2>
-    </div>
-
   </body>
 </html>
