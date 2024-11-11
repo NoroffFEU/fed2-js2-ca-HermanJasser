@@ -68,13 +68,16 @@ function listMyPosts(api) {
 
         // Create the HTML content for each post
         cont += `
-        <div>
-            <h2>${api[i].title}</h2> 
-            <img src="${mediaUrl}" alt="${mediaAlt}">
-            <p>${bodyContent}</p>
-            <a href="/post/edit/?id=${api[i].id}">Edit post</a>
-            <button id="${api[i].id}">Slett</button>
-        </div>
+            <div class="flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden my-10 p-4">
+                <h2 class="text-2xl font-semibold text-center p-4">${api[i].title}</h2>
+                <img class="mx-auto w-3/4 my-4" src="${mediaUrl}" alt="${mediaAlt}">
+                <p class="px-4 py-2 text-gray-700">${bodyContent}</p>
+                <div class="flex justify-between items-center px-4 py-2">
+                    <a href="/post/edit/?id=${api[i].id}" class="text-blue-500 hover:underline">Edit post</a>
+                    <button id="${api[i].id}" class="text-red-500 hover:underline">Slett</button>
+                </div>
+            </div>
+
         `;
     }
 
